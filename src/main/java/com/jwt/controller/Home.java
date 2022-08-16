@@ -9,8 +9,13 @@ public class Home {
     @RequestMapping("/welcome")
     public String welcome(){
         String text = "this is private page ";
-        text += "this page is not allowed to unauthenticated users";
+        text += "halaman ini tidak diizinkan untuk pengguna yang tidak diautentikasi";
         return text;
+    }
+
+    @RequestMapping("/getusers")
+    public String getUsers(){
+        return "{\"name\":\"Damar\"}";
     }
 
 }
